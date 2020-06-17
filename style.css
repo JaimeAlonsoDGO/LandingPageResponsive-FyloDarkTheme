@@ -1,0 +1,597 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --intro-email-sign-up-bg: hsl(217, 28%, 15%);
+    --main-bg: hsl(218, 28%, 13%);
+    --footer-bg: hsl(216, 53%, 9%);
+    --testimonials-bg: hsl(219, 30%, 18%);
+    --cyan-gradient: hsl(176, 68%, 64%);
+    --blue-gradient: hsl(198, 60%, 50%);
+    --cyan-gradient-hover: hsl(176, 62%, 72%);
+    --blue-gradient-hover: hsl(198, 73%, 61%);
+    --links-hover: hsla(219, 14%, 72%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --font-headings-call-header:'Raleway', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --max-width-desktop: 1440px;
+    --max-heigth-desktop: 3619px;
+    --max-width-mobile: 375px;
+    --max-heigth-mobile: 5035px;
+}
+
+body{
+    color: white;
+    background-color: var(--main-bg);
+    font-size: 14px;
+    font-family: var(--font-body);
+}
+
+.navigation-bar,
+.main-container,
+.testimonial-card,
+.subscription-container{
+    background: var(--intro-email-sign-up-bg);
+}
+
+.navigation-bar,
+.main-container,
+.productive-container,
+.testimonials-container{
+    padding: 0 5.5em;
+}
+
+.container{
+    margin: auto;
+    max-width: var(--max-width-desktop);
+    height: var(--max-heigth-desktop);
+}
+
+.navigation-bar{
+    height: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 30%;
+}
+
+.links{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link,
+.main-title,
+.card-title,
+.productive-title{
+    font-family: var(--font-headings-call-header);
+}
+
+.nav-link{
+    color: var(--white);
+    opacity: 70%;
+    font-size: 1.3em;
+}
+
+.nav-link:hover{
+    background: var(--links-hover);
+}
+
+.main-container{
+    text-align: center;
+    background-image: url('images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.main-image{
+    margin-bottom: 3em;
+}
+
+.main-title{
+    font-size: 3em;
+    padding: 0 6em;
+    line-height: 1.5em;
+}
+
+.main-description{
+    font-size: 1.4em;
+    line-height: 1.5em;
+    padding: 1em 18em;
+    opacity: 80%;
+    margin-bottom: .8em;
+}
+
+.button-get-started{
+    background-image: linear-gradient(135deg, var(--cyan-gradient), var(--blue-gradient));
+    height: 4em;
+    width: 20em;
+    border-radius: 8em;
+    margin: auto;
+    padding: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.benefits{
+    height: 57em;
+    padding: 5rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-icon{
+    height: 5em;
+    max-width: 100%;
+}
+
+.benefits-card{
+    text-align: center;
+    padding: 1em 5em;
+}
+
+.card-title{
+    font-weight: 700;
+    font-size: 1.2em;
+    height: 3.5em;
+    padding-top: 1em;
+}
+
+.card-description{
+    height: 7em;
+    opacity: 80%;
+}
+
+.card-description-access{
+    padding: 1em 5.2em;
+}
+
+.card-description-security,
+.card-description-collab{
+    padding: 1em 4em;
+}
+
+.card-description-file{
+    padding: 1em 4.8em;
+}
+
+.productive-container{
+    display: flex;
+    align-items: center;
+    height: 600px;
+}
+
+.productive-image{
+    width: 100%;
+}
+.productive-info{
+    max-width: 50%;
+    min-width: 50%;
+    height: 60%;
+}
+
+.productive-title{
+    font-size: 2.4em;
+    font-weight: 700;
+    padding-right: 7em;
+    padding-bottom: 1em;
+}
+
+.productive-description{
+    padding-bottom: 2em;
+    font-size: 1.3em;
+    font-weight: 400;
+    opacity: 80%;
+}
+
+.pd-last{
+    margin-bottom: 1em;
+}
+
+.productive-link{
+    color: var(--cyan-gradient);
+    width: 24%;
+    border-bottom: 1px solid var(--cyan-gradient);
+    cursor: pointer;
+    position: relative;
+}
+
+.productive-link::after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-image: url('images/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: .4em;
+    right: 0;
+}
+
+.testimonials-container{
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 2.5em;
+}
+
+.testimonials-container::before{
+    content: "";
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-image: url('images/bg-quotes.png');
+    background-repeat: no-repeat;
+    left: 5em;
+    z-index: -1;
+}
+
+.testimonial-card{
+    height: 40%;
+    padding: 2em;
+}
+
+.testimonial{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.testimonial-profile{
+    display:flex;
+}
+
+.image-container{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.testimonial-photo{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.testimonial-name{
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.testimonial-job{
+    font-size: .6em;
+    opacity: 70%;
+}
+
+.subscription-container{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    bottom: -25%;
+    left: 25%;
+    padding: 2em 3em;
+    border-radius: .5em;
+}
+
+.subs-title{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.subs-description{
+    text-align: center;
+    font-size: .9em;
+    opacity: 80%;
+    padding: 0 2em;
+    margin-bottom: 2em;
+}
+
+.subs-action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.subs-input,
+.subs-button{
+    height: 60%;
+    border-radius: 2em;
+}
+
+.subs-input{
+    width: 65%;
+    padding-left: 3em;
+}
+
+.subs-button{
+    width: 30%;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(135deg, var(--cyan-gradient), var(--blue-gradient));
+    font-weight: 700;
+}
+
+.button-get-started:hover,
+.subs-button:hover{
+    background-image: linear-gradient(135deg, var(--cyan-gradient-hover), var(--blue-gradient-hover));
+}
+
+.footer{
+    height: 13.6%;
+    background: var(--footer-bg);
+    padding: 16em 10em 0;
+    font-weight: 400;
+}
+.footer-logo{
+    margin-bottom: 2em;
+}
+
+.footer-info{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr .5fr;
+    grid-gap: 2em;
+    height: 60%;
+}
+
+.location{
+    padding: 0 3em;
+    position: relative;
+}
+
+.location::before{
+    content: "";
+    height: 20px;
+    width: 15px;
+    display: block;
+    background-image: url('images/icon-location.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.footer-contact{
+    padding-left: 3em;
+}
+
+.links-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.social-network{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.telephone,
+.email{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.telephone::before,
+.email::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -3em;
+    top: 0;
+}
+
+.telephone::before{
+    background-image: url('images/icon-phone.svg');
+}
+
+.email::before{
+    background-image: url('images/icon-email.svg');
+}
+
+.link{
+    color: var(--white);
+}
+
+.fab{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .container{
+        max-width: var(--max-width-mobile);
+        height: var(--max-heigth-mobile);
+    }
+
+    .navigation-bar, 
+    .main-container, 
+    .productive-container, 
+    .testimonials-container{
+        padding: 1em;
+    }
+    .navigation-bar{
+        height: 1%;
+    }
+
+    .links{
+        width: 50%;
+        font-size: .8em;
+    }
+
+    .main-container{
+        text-align: center;
+        background-image: url(images/bg-curvy-mobile.svg), linear-gradient(var(--intro-email-sign-up-bg) 60%, var(--main-bg) 60%);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 1%;
+        margin-bottom: 5em;
+    }
+
+    .main-image{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .main-title{
+        padding: 0;
+        font-size: 1.7em;
+        margin-bottom: 1em;
+    }
+
+    .main-description{
+        padding: 0;
+        font-size: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .benefits{
+        padding: 0;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        height: 1400px;
+        padding: 1em;
+    }
+
+    .benefits-card{
+        padding: 0;
+        height: 300px;
+    }
+
+    .card-description{
+        padding: 1em;
+    }
+
+    .productive-container{
+        display: block;
+        padding: 1;
+        height: 750px;
+    }
+
+    .productive-info{
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .productive-image{
+        margin-bottom: 4em;
+    }
+
+    .productive-title{
+        font-size: 1.4em;
+        padding: 0;
+        margin-bottom: 1.1em;
+        text-align: center;
+    }
+
+    .productive-description{
+        font-size: 1.1em;
+        padding: 0;
+        margin-bottom: 1.1em;
+    }
+
+    .productive-link{
+        width: 45%;
+    }
+
+    .testimonials-container{
+        grid-template-columns: 1fr;
+        grid-gap: 3em;
+        padding: 4em 1em 60em;
+        height: 1350px;
+    }
+
+    .testimonials-container::before{
+        left: 1em;
+    }
+
+    .testimonial-card{
+        height: 250px;
+    }
+
+    .subscription-container{
+        width: 95%;
+        height: 400px;
+        left: 2.5%;
+        bottom: -15%;
+        padding: 3em 1em;
+    }
+
+    .subs-title{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .subs-description{
+        font-size: 1.15em;
+        padding: 0;
+    }
+
+    .subs-action{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5em;
+        height: 150px;
+    }
+
+    .subs-input{
+        width: 100%;
+        height: 50px;
+    }
+
+    .subs-button{
+        width: 100%;
+        height: 50px;
+    }
+
+    .footer{
+        padding: 16em 1em 0;
+        height: 800px;
+    }
+
+    .footer-logo{
+        width: 60%;
+    }
+
+    .footer-info{
+        grid-template-columns: 1fr;
+    }
+
+    .links-footer{
+        grid-template-columns: 1fr;
+    }
+
+    .blog{
+        margin-bottom: 3em;
+    }
+
+    .social-network{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fab{
+        margin-right: 1em;
+    }
+
+}
